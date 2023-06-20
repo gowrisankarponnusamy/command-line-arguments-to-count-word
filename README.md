@@ -21,16 +21,15 @@ Run the program by giving "python prgm.py EX12.txt" on the terminal.
 #Developed By: Gowrisankar.p
 #Register No: 212222230041
 import sys
-count = {}
-with open(sys.argv[1], 'r') as f:
-    for line in f:
-        for word in line.split():
-            if word not in count:
-                count[word] = 1
+fp=open(sys.argv[1],"r")
+d={}
+for i in fp:
+    for w in i.split():
+            if w not in d.keys():
+                d[w] = 1
             else:
-                count[word] += 1
-print(count)
-f.close()
+                d[w] += 1
+print(d)
 ```
 ### File Content:
 ![image](https://github.com/gowrisankarponnusamy/command-line-arguments-to-count-word/assets/119393123/5820779c-44ec-4295-b90c-337bb00f7151)
